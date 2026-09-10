@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Examen Simulador de practica - 100 Escenarios de Resolución de Problemas</title>
+    <title>Examen Práctico CCST Cybersecurity - 100 Escenarios de Resolución de Problemas</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between font-sans">
@@ -12,8 +12,8 @@
     <header class="bg-slate-900 border-b border-slate-800 shadow-md py-4 px-6 sticky top-0 z-50">
         <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
             <div>
-                <h1 class="text-xl font-bold text-cyan-400">CCST Cybersecurity: Examen de Simulacion de Escenarios</h1>
-                <p class="text-xs text-slate-400">Simulador de Practica Basado en Resolución de Problemas (100 Casos)</p>
+                <h1 class="text-xl font-bold text-cyan-400">CCST Cybersecurity: Examen de Escenarios</h1>
+                <p class="text-xs text-slate-400">Simulador de practica Basado en Resolución de Problemas (100 Casos)</p>
             </div>
             <div id="stats-bar" class="hidden flex items-center gap-6 bg-slate-950 px-4 py-2 rounded-lg border border-slate-800 text-sm">
                 <div><span>Caso: </span><span id="current-q-num" class="font-bold text-cyan-400">1</span>/<span id="total-q-num">100</span></div>
@@ -32,7 +32,7 @@
             </div>
             <h2 class="text-2xl font-bold mb-2">Simulador de Escenarios Prácticos CCST</h2>
             <p class="text-slate-300 mb-6 text-sm sm:text-base leading-relaxed">
-                Este examen permite practicar habilidades analíticas y técnicas mediante <strong>100 escenarios de resolución de problemas</strong> en ciberseguridad, alineados con el estándar de problemas de ciberseguridad.
+                Este examen permite practicar tus habilidades analíticas y técnicas mediante <strong>100 escenarios reales de resolución de problemas</strong> en ciberseguridad.
             </p>
             <div class="bg-slate-950 border border-slate-800 p-4 rounded-lg mb-6 text-left text-sm text-slate-300 space-y-2">
                 <p>📋 <strong>Enfoque:</strong> Casos prácticos de incidentes, redes, accesos y vulnerabilidades.</p>
@@ -94,144 +94,1113 @@
 
     <!-- Footer -->
     <footer class="bg-slate-900 border-t border-slate-800 py-4 px-6 text-center text-xs text-slate-500">
-        Simulador de practica CCST Cybersecurity • Elaborado con fines educativos.
+        Simulador de practica CCST Cybersecurity • Elaborado por fines educativos.
     </footer>
 
-    <!-- Script Application Logic & Bank of 100 Scenario Questions -->
+    <!-- Script Application Logic & Bank of 100 Unique Scenario Questions -->
     <script>
         const questions = [
             {
-                domain: "Dominio 3: Amenazas y Análisis de Incidentes",
-                question: "Escenario 1: Un empleado recibe un correo electrónico que simula ser el departamento de soporte técnico de la empresa, solicitando urgentemente que haga clic en un enlace para actualizar su contraseña corporativa antes de que su cuenta sea bloqueada. ¿Qué tipo de ataque e indicador principal se presenta en este escenario?",
+                domain: "Dominio 1: Principios Esenciales de Seguridad",
+                question: "Escenario 1: Un atacante logra modificar los registros contables en una base de datos corporativa sin autorización previa. ¿Qué elemento de la Tríada CIA se ha visto comprometido principalmente en este caso?",
                 options: [
-                    { text: "Ataque de Phishing; el indicador clave es la urgencia y la suplantación de identidad corporativa.", correct: true },
-                    { text: "Ataque de Denegación de Servicio (DoS); el indicador es la saturación del servidor de correo.", correct: false },
-                    { text: "Ataque de Fuerza Bruta; el indicador es el intento automatizado de claves.", correct: false },
-                    { text: "Inyección SQL; el indicador es la alteración de formularios web.", correct: false }
+                    { text: "A) Confidencialidad", correct: false },
+                    { text: "B) Integridad", correct: true },
+                    { text: "C) Disponibilidad", correct: false },
+                    { text: "D) No repudio", correct: false }
                 ],
-                explanation: "El escenario describe un intento de phishing clásico mediante ingeniería social, buscando manipular al usuario bajo urgencia para robar sus credenciales."
+                explanation: "La alteración no autorizada de datos afecta directamente la integridad, asegurando que la información permanezca exacta y confiable."
             },
             {
-                domain: "Dominio 4: Manejo de Incidentes y Operaciones",
-                question: "Escenario 2: Durante el turno nocturno, el sistema SIEM genera alertas masivas indicando que un equipo de la estación de contabilidad está ejecutando procesos inusuales de cifrado masivo de archivos y enviando tráfico saliente constante a una IP desconocida en el extranjero. ¿Cuál debe ser la primera acción de contención inmediata?",
+                domain: "Dominio 1: Principios Esenciales de Seguridad",
+                question: "Escenario 2: Se establece una política que obliga a los usuarios a contar únicamente con los permisos indispensables para desempeñar sus tareas específicas. ¿Cómo se denomina esta regla de seguridad?",
                 options: [
-                    { text: "Apagar físicamente el servidor principal de la empresa para prevenir daños globales.", correct: false },
-                    { text: "Desconectar físicamente el equipo de contabilidad de la red (LAN/Wi-Fi) para aislar la posible infección de ransomware.", correct: true },
-                    { text: "Modificar la contraseña del usuario administrador de dominio general.", correct: false },
-                    { text: "Enviar un correo masivo a todos los empleados alertando sobre el incidente.", correct: false }
+                    { text: "A) Zero Trust", correct: false },
+                    { text: "B) Autenticación multifactor", correct: false },
+                    { text: "C) Principio de menor privilegio", correct: true },
+                    { text: "D) Defensa en profundidad", correct: false }
                 ],
-                explanation: "Ante sospecha de ransomware en activo, la prioridad número uno en la contención es el aislamiento inmediato del host afectado para detener la propagación en la red."
+                explanation: "El principio de menor privilegio limita la exposición reduciendo los derechos de acceso al mínimo necesario."
             },
             {
-                domain: "Dominio 2: Principios de Redes y Seguridad Perimetral",
-                question: "Escenario 3: Un administrador de redes detecta que un servidor web interno expuesto a internet está recibiendo solicitudes HTTP maliciosas que contienen comandos 'UNION SELECT' en los parámetros de la URL para extraer datos de la base de datos corporativa. ¿Cómo se clasifica esta vulnerabilidad y cómo debe mitigarse?",
+                domain: "Dominio 1: Principios Esenciales de Seguridad",
+                question: "Escenario 3: La arquitectura de una red corporativa moderna asume que ningún dispositivo o usuario interno debe ser considerado confiable por defecto, exigiendo verificación constante. ¿Qué modelo se está aplicando?",
                 options: [
-                    { text: "Cross-Site Scripting (XSS); mitigado mediante cifrado TLS en el puerto 443.", correct: false },
-                    { text: "SQL Injection (SQLi); mitigado implementando consultas parametrizadas y validación estricta de entradas.", correct: true },
-                    { text: "Desbordamiento de búfer; mitigado actualizando la memoria RAM del servidor.", correct: false },
-                    { text: "Ataque Man-in-the-Middle; mitigado instalando certificados SSL válidos.", correct: false },
+                    { text: "A) Perímetro seguro tradicional", correct: false },
+                    { text: "B) Zero Trust (Confianza Cero)", correct: true },
+                    { text: "C) Autenticación básica", correct: false },
+                    { text: "D) Red privada abierta", correct: false }
                 ],
-                explanation: "El uso de sintaxis SQL en los parámetros web apunta directamente a SQL Injection. La solución técnica correcta a nivel de código es utilizar consultas parametrizadas."
+                explanation: "Zero Trust evalúa la identidad y el contexto de seguridad de forma continua sin importar la ubicación física."
             },
             {
-                domain: "Dominio 1: Conceptos de Seguridad y Control de Acceso",
-                question: "Escenario 4: En una empresa de desarrollo de software, se requiere que los pasantes de soporte técnico sólo puedan ver tickets de incidencias básicas y no tengan acceso a los repositorios de código fuente de producción. ¿Qué principio de seguridad se debe aplicar obligatoriamente?",
+                domain: "Dominio 1: Principios Esenciales de Seguridad",
+                question: "Escenario 4: Un empleado recibe un mensaje que simula urgencia institucional solicitando claves de acceso a través de un enlace externo. ¿Qué tipo de amenaza social se evidencia?",
                 options: [
-                    { text: "Principio de menor privilegio (PoLP)", correct: true },
-                    { text: "Defensa en profundidad perimetral", correct: false },
-                    { text: "Cifrado simétrico de extremo a extremo", correct: false },
-                    { text: "Autenticación multifactor obligatoria por SMS", correct: false }
+                    { text: "A) Phishing", correct: true },
+                    { text: "B) Denegación de servicio", correct: false },
+                    { text: "C) Inyección de código", correct: false },
+                    { text: "D) Cifrado de disco", correct: false }
                 ],
-                explanation: "El principio de menor privilegio restringe los derechos de acceso de los usuarios exclusivamente a lo necesario para desempeñar sus funciones específicas."
+                explanation: "El phishing utiliza la suplantación y la manipulación psicológica a través de medios digitales para robar credenciales."
             },
             {
-                domain: "Dominio 2: Principios de Redes y Conectividad",
-                question: "Escenario 5: Un técnico de soporte ayuda a configurar una nueva sucursal y se percata de que los dispositivos de voz (IP Phones) y las computadoras de los empleados comparten exactamente el mismo segmento de red física, lo que facilita el rastreo de tráfico y riesgos de seguridad. ¿Qué solución arquitectónica de red debe implementar?",
+                domain: "Dominio 1: Principios Esenciales de Seguridad",
+                question: "Escenario 5: Para iniciar sesión en el servidor financiero, el personal debe introducir una clave y además un código de un solo uso enviado a su dispositivo móvil. ¿Qué mecanismo es este?",
                 options: [
-                    { text: "Configurar un túnel VPN IPSec de sitio a sitio.", correct: false },
-                    { text: "Implementar VLANs (Virtual Local Area Networks) para segmentar el tráfico de voz y datos lógicamente.", correct: true },
-                    { text: "Instalar un servidor DHCP secundario en la misma subred.", correct: false },
-                    { text: "Desactivar los puertos del switch que no estén en uso.", correct: false }
+                    { text: "A) Contraseña robusta única", correct: false },
+                    { text: "B) Autenticación Multifactor (MFA)", correct: true },
+                    { text: "C) Certificado digital raíz", correct: false },
+                    { text: "D) Token de red estático", correct: false }
                 ],
-                explanation: "Las VLANs permiten segmentar lógicamente redes físicas para aislar dominios de broadcast y mejorar la seguridad separando tipos de dispositivos críticos."
+                explanation: "MFA combina múltiples factores independientes (algo que sabes y algo que tienes) para validar identidades."
             },
             {
-                domain: "Dominio 3: Amenazas y Análisis de Vulnerabilidades",
-                question: "Escenario 6: Un equipo portátil corporativo es robado de la cafetería de un aeropuerto. El departamento de TI confirma que el disco duro contenía información financiera confidencial de clientes, pero afortunadamente el dispositivo contaba con cifrado completo de disco (BitLocker/FileVault) activo y una política robusta de PIN de inicio. ¿Qué elemento de la tríada CIA se salvaguardó exitosamente?",
+                domain: "Dominio 1: Principios Esenciales de Seguridad",
+                question: "Escenario 6: Una infraestructura cuenta con múltiples capas defensivas superpuestas (firewalls, EDR, segmentación, políticas). ¿Cómo se denomina conceptualmente esta estrategia?",
                 options: [
-                    { text: "La Disponibilidad, evitando que los archivos sean borrados por error.", correct: false },
-                    { text: "La Confidencialidad, previniendo la lectura o extracción no autorizada de los datos almacenados.", correct: true },
-                    { text: "La Integridad, asegurando que los archivos no sufran modificaciones de software.", correct: false },
-                    { text: "El No Repudio, garantizando la firma digital del usuario.", correct: false }
+                    { text: "A) Monitoreo plano", correct: false },
+                    { text: "B) Defensa en profundidad (Defense-in-Depth)", correct: true },
+                    { text: "C) Alta disponibilidad", correct: false },
+                    { text: "D) Cifrado simétrico", correct: false }
                 ],
-                explanation: "El cifrado de disco protege específicamente la confidencialidad de la información estática cuando el hardware físico cae en manos ajenas o es sustraído."
+                explanation: "La defensa en profundidad asegura que si una barrera falla, las demás continúen protegiendo los activos."
             },
             {
-                domain: "Dominio 4: Manejo de Incidentes y Operaciones",
-                question: "Escenario 7: Un analista de seguridad forense digital debe recopilar evidencia en un disco duro de un servidor comprometido. Para garantizar que la evidencia sea admisible en procesos legales y demostrar que no ha sido alterada, ¿qué procedimiento técnico es indispensable aplicar?",
+                domain: "Dominio 1: Principios Esenciales de Seguridad",
+                question: "Escenario 7: Un atacante investiga perfiles ejecutivos para enviar correos altamente personalizados y fraudulentos. ¿Cómo se le conoce a esta variante dirigida?",
                 options: [
-                    { text: "Formatear el disco en formato NTFS antes de extraer los archivos de log.", correct: false },
-                    { text: "Mantener una estricta Cadena de Custodia y generar un hash criptográfico (como SHA-256) de la imagen del disco.", correct: true },
-                    { text: "Analizar los archivos directamente sobre el sistema operativo en funcionamiento sin apagarlo.", correct: false },
-                    { text: "Imprimir todas las carpetas de archivos en formato físico para su resguardo en archivador.", correct: false }
+                    { text: "A) Phishing masivo", correct: false },
+                    { text: "B) Spear Phishing", correct: true },
+                    { text: "C) Smishing", correct: false },
+                    { text: "D) Vishing", correct: false }
                 ],
-                explanation: "La cadena de custodia junto con funciones hash (como SHA-256) garantiza la integridad forense de la evidencia digital ante auditorías o juicios."
+                explanation: "El spear phishing personaliza el ataque investigando previamente objetivos específicos de alto valor."
             },
             {
-                domain: "Dominio 2: Principios de Redes",
-                question: "Escenario 8: Un usuario se conecta a una red Wi-Fi pública y gratuita en una cafetería. Al navegar por portales de banca en línea sin verificar los certificados, un atacante posicionado en el mismo punto de acceso intercepta y lee las credenciales transmitidas en texto plano. ¿Qué tipo de ataque se materializó?",
+                domain: "Dominio 1: Principios Esenciales de Seguridad",
+                question: "Escenario 8: Un operador malintencionado realiza llamadas telefónicas fingiendo ser soporte técnico para obtener contraseñas. ¿Qué término define esta modalidad?",
                 options: [
-                    { text: "Ataque de desbordamiento de búfer (Buffer Overflow)", correct: false },
-                    { text: "Ataque de Hombre en el Medio (Man-in-the-Middle - MitM)", correct: true },
-                    { text: "Ataque de denegación de servicio distribuido (DDoS)", correct: false },
-                    { text: "Ataque de denegación de recursos DHCP", correct: false }
+                    { text: "A) Phishing web", correct: false },
+                    { text: "B) Pharming", correct: false },
+                    { text: "C) Vishing", correct: true },
+                    { text: "D) Spoofing de paquetes", correct: false }
                 ],
-                explanation: "Un ataque MitM ocurre cuando el agresor se interpone en la comunicación de red, pudiendo capturar o modificar datos si no se cuenta con cifrado robusto (HTTPS/TLS)."
+                explanation: "Vishing combina voz (voice) y phishing para estafar a través de telefonía."
             },
             {
-                domain: "Dominio 1: Conceptos de Seguridad",
-                question: "Escenario 9: Para acceder a los servidores de bases de datos críticas de la empresa, los administradores deben ingresar su contraseña corporativa y posteriormente introducir un código numérico dinámico generado por una aplicación en su teléfono móvil. ¿Cómo se denomina esta arquitectura de control de acceso?",
+                domain: "Dominio 1: Principios Esenciales de Seguridad",
+                question: "Escenario 9: Se implementan firmas digitales en transacciones comerciales para asegurar que el emisor no pueda negar la autoría del envío. ¿Qué propiedad se cumple?",
                 options: [
-                    { text: "Autenticación de Factor Único basado en conocimiento", correct: false },
-                    { text: "Autenticación Multifactor (MFA)", correct: true },
-                    { text: "Control de Acceso Discrecional (DAC)", correct: false },
-                    { text: "Seguridad por Obscuridad", correct: false }
+                    { text: "A) Confidencialidad", correct: false },
+                    { text: "B) No repudio", correct: true },
+                    { text: "C) Disponibilidad", correct: false },
+                    { text: "D) Integridad física", correct: false }
                 ],
-                explanation: "El uso combinado de contraseña (algo que sabes) y código de aplicación móvil (algo que tienes) define la autenticación multifactor (MFA)."
+                explanation: "El no repudio garantiza fehacientemente la autoría de una comunicación de modo que no pueda ser negada."
             },
             {
-                domain: "Dominio 3: Amenazas y Análisis de Incidentes",
-                question: "Escenario 10: Durante una auditoría interna de seguridad, se descubre que una aplicación web corporativa permite ejecutar comandos del sistema operativo local debido a que acepta entradas de texto en formularios sin ningún tipo de filtrado de caracteres especiales. ¿Cómo se denomina comúnmente a esta vulnerabilidad crítica?",
+                domain: "Dominio 1: Principios Esenciales de Seguridad",
+                question: "Escenario 10: El sistema de control de acceso físico de un edificio utiliza la lectura del iris del empleado. ¿A qué categoría de autenticación corresponde?",
                 options: [
-                    { text: "Falla de autenticación por fuerza bruta", correct: false },
-                    { text: "Vulnerabilidad de Inyección de Comandos (Command Injection)", correct: true },
-                    { text: "Ataque de suplantación de identidad DNS", correct: false },
-                    { text: "Error de configuración de zona en Firewall", correct: false }
+                    { text: "A) Algo que sabes", correct: false },
+                    { text: "B) Algo que tienes", correct: false },
+                    { text: "C) Algo que eres (Biometría)", correct: true },
+                    { text: "D) Algo que haces", correct: false }
                 ],
-                explanation: "La inyección de comandos ocurre cuando aplicaciones vulnerables pasan entradas de usuario directamente al intérprete del sistema operativo sin sanitización."
+                explanation: "Los rasgos corporativos y biométricos corresponden a la categoría de autenticación basada en características físicas intrínsecas."
             },
-            // Generación automatizada y variada de los escenarios del 11 al 100 para completar el banco exhaustivo
-            ...Array.from({ length: 90 }, (_, index) => {
-                const n = index + 11;
-                const domains = [
-                    "Dominio 1: Conceptos de Seguridad y Políticas",
-                    "Dominio 2: Redes y Dispositivos de Seguridad",
-                    "Dominio 3: Amenazas, Malware y Vulnerabilidades",
-                    "Dominio 4: Manejo de Incidentes, Respaldos y Operaciones"
-                ];
-                const domain = domains[index % domains.length];
-                return {
-                    domain: domain,
-                    question: `Escenario ${n}: Analice el caso operativo en el área de soporte técnico donde se detecta una anomalía asociada a la seguridad de la información corporativa. ¿Cuál es la directriz técnica o procedimiento correcto a seguir en este caso específico #${n}?`,
-                    options: [
-                        { text: "Aplicar la mitigación estándar validada por políticas de seguridad, aislando el componente y documentando el evento en el sistema de gestión.", correct: true },
-                        { text: "Reiniciar todos los equipos de la red corporativa de forma simultánea sin realizar análisis previo de logs.", correct: false },
-                        { text: "Desactivar de forma permanente los sistemas de autenticación y cortafuegos perimetrales para agilizar la producción.", correct: false },
-                        { text: "Ignorar la alerta si el usuario afectado reporta que sus aplicaciones abren con normalidad.", correct: false }
-                    ],
-                    explanation: `En el escenario ${n}, la respuesta correcta prioriza el cumplimiento de procedimientos estructurados de ciberseguridad, contención técnica y registro formal en bitácoras.`
-                };
-            })
+            {
+                domain: "Dominio 1: Principios Esenciales de Seguridad",
+                question: "Escenario 11: Una persona no autorizada camina detrás de un empleado autorizado pegándose a su espalda para ingresar a una sala de servidores sin tarjeta. ¿Cómo se llama esta brecha física?",
+                options: [
+                    { text: "A) Keylogging", correct: false },
+                    { text: "B) Tailgating (Piggybacking)", correct: true },
+                    { text: "C) Eavesdropping", correct: false },
+                    { text: "D) Sniffing", correct: false }
+                ],
+                explanation: "El tailgating explota la cortesía humana para acceder de forma ilícita a zonas protegidas."
+            },
+            {
+                domain: "Dominio 1: Principios Esenciales de Seguridad",
+                question: "Escenario 12: Para prevenir ataques de fuerza bruta en cuentas de usuario corporativas, ¿qué configuración técnica es la más adecuada?",
+                options: [
+                    { text: "A) Permitir intentos ilimitados de contraseña", correct: false },
+                    { text: "B) Implementar políticas de bloqueo de cuenta temporal tras fallos consecutivos", correct: true },
+                    { text: "C) Usar contraseñas numéricas de 3 dígitos", correct: false },
+                    { text: "D) Desactivar los registros de auditoría", correct: false }
+                ],
+                explanation: "El bloqueo de cuenta frena de inmediato la ejecución automatizada de pruebas masivas de claves."
+            },
+            {
+                domain: "Dominio 1: Principios Esenciales de Seguridad",
+                question: "Escenario 13: Un servidor web sufre una inundación de peticiones falsas que saturan sus recursos, impidiendo el acceso a los usuarios legítimos. ¿Qué pilar se vio afectado?",
+                options: [
+                    { text: "A) Confidencialidad", correct: false },
+                    { text: "B) Disponibilidad", correct: true },
+                    { text: "C) Integridad", correct: false },
+                    { text: "D) Autorización", correct: false }
+                ],
+                explanation: "La disponibilidad garantiza que los recursos permanezcan operativos y accesibles cuando se requieran."
+            },
+            {
+                domain: "Dominio 1: Principios Esenciales de Seguridad",
+                question: "Escenario 14: Un atacante altera los registros DNS para desviar el tráfico de un sitio bancario legítimo hacia un servidor falso controlado por él. ¿Qué técnica se utilizó?",
+                options: [
+                    { text: "A) Pharming", correct: true },
+                    { text: "B) SQL Injection", correct: false },
+                    { text: "C) Cross-Site Scripting", correct: false },
+                    { text: "D) Spear Phishing", correct: false }
+                ],
+                explanation: "El pharming o envenenamiento de DNS redirige de forma transparente a los usuarios hacia destinos falsificados."
+            },
+            {
+                domain: "Dominio 1: Principios Esenciales de Seguridad",
+                question: "Escenario 15: El equipo de seguridad evalúa el total de puntos de entrada vulnerables y servicios expuestos en la infraestructura digital. ¿Qué concepto describe esta métrica?",
+                options: [
+                    { text: "A) Presupuesto operativo", correct: false },
+                    { text: "B) Superficie de ataque", correct: true },
+                    { text: "C) Capacidad de almacenamiento", correct: false },
+                    { text: "D) Ancho de banda", correct: false }
+                ],
+                explanation: "La superficie de ataque agrupa todos los vectores y puntos donde un atacante puede intentar accesos."
+            },
+            {
+                domain: "Dominio 1: Principios Esenciales de Seguridad",
+                question: "Escenario 16: Un grupo criminal compromete un sitio web corporativo de noticias muy visitado por los empleados de una empresa objetivo para infectar sus equipos mediante descargas ocultas. ¿Cómo se denomina?",
+                options: [
+                    { text: "A) Watering Hole Attack", correct: true },
+                    { text: "B) Ataque de fuerza bruta", correct: false },
+                    { text: "C) Inundación SYN", correct: false },
+                    { text: "D) Vishing telefónico", correct: false }
+                ],
+                explanation: "Un ataque de abrevadero (Watering Hole) compromete sitios frecuentados por el blanco para infectarlos indirectamente."
+            },
+            {
+                domain: "Dominio 1: Principios Esenciales de Seguridad",
+                question: "Escenario 17: La gerencia redacta un documento formal que establece las reglas obligatorias sobre el uso correcto de equipos y datos corporativos. ¿Qué documento es?",
+                options: [
+                    { text: "A) Manual de marca comercial", correct: false },
+                    { text: "B) Política de seguridad de la información", correct: true },
+                    { text: "C) Factura de adquisición de hardware", correct: false },
+                    { text: "D) Guía de instalación de software", correct: false }
+                ],
+                explanation: "La política de seguridad fija el marco normativo de cumplimiento obligatorio para la protección de activos."
+            },
+            {
+                domain: "Dominio 1: Principios Esenciales de Seguridad",
+                question: "Escenario 18: Un atacante prueba listas masivas de credenciales filtradas de otros sitios web en una plataforma de comercio electrónico para ver si los usuarios reutilizan la clave. ¿Qué técnica es?",
+                options: [
+                    { text: "A) Credential Stuffing", correct: true },
+                    { text: "B) SQL Injection", correct: false },
+                    { text: "C) Spoofing de IP", correct: false },
+                    { text: "D) Encriptación simétrica", correct: false }
+                ],
+                explanation: "El credential stuffing aprovecha la mala práctica de reutilizar credenciales en múltiples servicios."
+            },
+            {
+                domain: "Dominio 1: Principios Esenciales de Seguridad",
+                question: "Escenario 19: Un token físico generador de contraseñas de un solo uso (TOTP) entregado a un empleado representa un factor de autenticación basado en:",
+                options: [
+                    { text: "A) Algo que sabes", correct: false },
+                    { text: "B) Algo que tienes", correct: true },
+                    { text: "C) Algo que eres", correct: false },
+                    { text: "D) Algo que ubicación", correct: false }
+                ],
+                explanation: "Un dispositivo físico o aplicación propia en posesión del usuario corresponde a la categoría 'algo que tienes'."
+            },
+            {
+                domain: "Dominio 1: Principios Esenciales de Seguridad",
+                question: "Escenario 20: ¿Cuáles son los tres componentes fundamentales que integran el acrónimo clásico de la Tríada CIA?",
+                options: [
+                    { text: "A) Conectividad, Identidad, Acceso", correct: false },
+                    { text: "B) Confidencialidad, Integridad, Disponibilidad", correct: true },
+                    { text: "C) Control, Inspección, Auditoría", correct: false },
+                    { text: "D) Certificación, Ingeniería, Arquitectura", correct: false }
+                ],
+                explanation: "Confidencialidad, Integridad y Disponibilidad son los pilares universales de la seguridad de la información."
+            },
+            {
+                domain: "Dominio 2: Conceptos Básicos de Seguridad en Redes",
+                question: "Escenario 21: Al auditar un servidor web de una tienda en línea, se detecta que las páginas de pago transmiten datos sensibles a través del puerto 80 sin cifrado. ¿Qué puerto estándar debería utilizarse obligatoriamente?",
+                options: [
+                    { text: "A) Puerto 21", correct: false },
+                    { text: "B) Puerto 22", correct: false },
+                    { text: "C) Puerto 443 (HTTPS)", correct: true },
+                    { text: "D) Puerto 3389", correct: false }
+                ],
+                explanation: "El puerto 443 maneja tráfico web cifrado mediante TLS/SSL, a diferencia del inseguro puerto 80."
+            },
+            {
+                domain: "Dominio 2: Conceptos Básicos de Seguridad en Redes",
+                question: "Escenario 22: Un sistema de defensa de red detecta tráfico anómalo y procede automáticamente a bloquear el flujo malicioso en tiempo real. ¿De qué dispositivo se trata?",
+                options: [
+                    { text: "A) IDS (Sistema de Detección de Intrusos)", correct: false },
+                    { text: "B) IPS (Sistema de Prevención de Intrusos)", correct: true },
+                    { text: "C) Hub repetidor pasivo", correct: false },
+                    { text: "D) Switch no administrable", correct: false }
+                ],
+                explanation: "A diferencia de un IDS que solo emite alertas, el IPS tiene capacidad activa de bloqueo y mitigación."
+            },
+            {
+                domain: "Dominio 2: Conceptos Básicos de Seguridad en Redes",
+                question: "Escenario 23: ¿En qué capa del modelo OSI opera principalmente un router tradicional para tomar decisiones de encaminamiento basadas en direcciones IP lógicas?",
+                options: [
+                    { text: "A) Capa 1 (Física)", correct: false },
+                    { text: "B) Capa 2 (Enlace de datos)", correct: false },
+                    { text: "C) Capa 3 (Red)", correct: true },
+                    { text: "D) Capa 7 (Aplicación)", correct: false }
+                ],
+                explanation: "Los enrutadores operan en la capa de red (Capa 3) manejando direccionamiento lógico IP."
+            },
+            {
+                domain: "Dominio 2: Conceptos Básicos de Seguridad en Redes",
+                question: "Escenario 24: Un administrador de sistemas necesita conectarse a una consola remota de servidor Linux de forma totalmente cifrada y segura. ¿Qué protocolo debe habilitar?",
+                options: [
+                    { text: "A) Telnet en puerto 23", correct: false },
+                    { text: "B) SSH en puerto 22", correct: true },
+                    { text: "C) HTTP en puerto 80", correct: false },
+                    { text: "D) FTP en puerto 21", correct: false }
+                ],
+                explanation: "SSH cifra íntegramente la sesión de comandos remotos, reemplazando al obsoleto y vulnerable Telnet."
+            },
+            {
+                domain: "Dominio 2: Conceptos Básicos de Seguridad en Redes",
+                question: "Escenario 25: Para aislar el tráfico de los departamentos de Recursos Humanos y Finanzas dentro de un mismo switch físico, el administrador configura redes virtuales independientes. ¿Qué tecnología utiliza?",
+                options: [
+                    { text: "A) VPN IPsec", correct: false },
+                    { text: "B) VLAN (Virtual Local Area Network)", correct: true },
+                    { text: "C) Servidor DHCP estático", correct: false },
+                    { text: "D) NAT estático", correct: false }
+                ],
+                explanation: "Las VLANs permiten segmentar lógicamente dominios de broadcast en switches físicos."
+            },
+            {
+                domain: "Dominio 2: Conceptos Básicos de Seguridad en Redes",
+                question: "Escenario 26: Un empleado que trabaja de manera remota desde un hotel necesita conectarse a los recursos internos de la empresa como si estuviera en la oficina local. ¿Qué tecnología establece un canal cifrado sobre internet?",
+                options: [
+                    { text: "A) Red Privada Virtual (VPN)", correct: true },
+                    { text: "B) Conexión HTTP abierta", correct: false },
+                    { text: "C) Servidor Proxy transparente", correct: false },
+                    { text: "D) Conmutador VLAN de capa 2", correct: false }
+                ],
+                explanation: "La VPN crea un túnel cifrado seguro a través de redes públicas como Internet."
+            },
+            {
+                domain: "Dominio 2: Conceptos Básicos de Seguridad en Redes",
+                question: "Escenario 27: Un atacante logra posicionarse entre la comunicación de un cliente y un servidor, alterando paquetes de red sin que los extremos lo noten. ¿Cómo se cataloga este incidente?",
+                options: [
+                    { text: "A) Man-in-the-Middle (MitM)", correct: true },
+                    { text: "B) Ataque de fuerza bruta", correct: false },
+                    { text: "C) Inundación ICMP", correct: false },
+                    { text: "D) Salto de VLAN", correct: false }
+                ],
+                explanation: "En un ataque MitM, el interceptor se ubica en medio del canal activo de comunicación."
+            },
+            {
+                domain: "Dominio 2: Conceptos Básicos de Seguridad en Redes",
+                question: "Escenario 28: Durante el análisis de tráfico en una red local, se observan credenciales viajando en texto plano a través del protocolo web estándar no cifrado. ¿De qué protocolo se trata?",
+                options: [
+                    { text: "A) HTTPS", correct: false },
+                    { text: "B) HTTP", correct: true },
+                    { text: "C) SFTP", correct: false },
+                    { text: "D) LDAPS", correct: false }
+                ],
+                explanation: "HTTP transmite información sin cifrar, por lo que es vulnerable a la captura mediante sniffers."
+            },
+            {
+                domain: "Dominio 2: Conceptos Básicos de Seguridad en Redes",
+                question: "Escenario 29: El departamento de TI instala un equipo perimetral que evalúa reglas de filtrado de IP, puertos y protocolos para bloquear tráfico no autorizado. ¿Qué dispositivo se instaló?",
+                options: [
+                    { text: "A) Firewall", correct: true },
+                    { text: "B) Hub pasivo", correct: false },
+                    { text: "C) Concentrador USB", correct: false },
+                    { text: "D) Repetidor de señal", correct: false }
+                ],
+                explanation: "El firewall actúa como guardián perimetral aplicando reglas de control de acceso a nivel de red."
+            },
+            {
+                domain: "Dominio 2: Conceptos Básicos de Seguridad en Redes",
+                question: "Escenario 30: ¿Qué protocolo se encarga de traducir nombres de dominio legibles (ej. www.cisco.com) en direcciones IP numéricas?",
+                options: [
+                    { text: "A) DHCP", correct: false },
+                    { text: "B) DNS", correct: true },
+                    { text: "C) ARP", correct: false },
+                    { text: "D) FTP", correct: false }
+                ],
+                explanation: "El sistema de nombres de dominio (DNS) opera como la guía telefónica de internet."
+            },
+            {
+                domain: "Dominio 2: Conceptos Básicos de Seguridad en Redes",
+                question: "Escenario 31: Múltiples sistemas comprometidos (botnets) coordinan una avalancha masiva de peticiones contra un servidor web corporativo para colapsarlo. ¿Cómo se denomina?",
+                options: [
+                    { text: "A) Ataque DDoS (Denegación de Servicio Distribuida)", correct: true },
+                    { text: "B) Escaneo de puertos nmap", correct: false },
+                    { text: "C) Inyección SQL distribuida", correct: false },
+                    { text: "D) Ataque de fuerza bruta local", correct: false }
+                ],
+                explanation: "DDoS involucra múltiples fuentes distribuidas atacando simultáneamente un objetivo para saturar su disponibilidad."
+            },
+            {
+                domain: "Dominio 2: Conceptos Básicos de Seguridad en Redes",
+                question: "Escenario 32: ¿Qué número de puerto estándar utiliza el protocolo SFTP para transferencia segura de archivos basada en SSH?",
+                options: [
+                    { text: "A) Puerto 80", correct: false },
+                    { text: "B) Puerto 21", correct: false },
+                    { text: "C) Puerto 22", correct: true },
+                    { text: "D) Puerto 443", correct: false }
+                ],
+                explanation: "Al basarse en el canal seguro de SSH, SFTP opera por defecto en el puerto 22."
+            },
+            {
+                domain: "Dominio 2: Conceptos Básicos de Seguridad en Redes",
+                question: "Escenario 33: ¿Cuál es la diferencia primordial entre un IDS y un IPS en una infraestructura de red?",
+                options: [
+                    { text: "A) El IDS bloquea tráfico y el IPS solo genera reportes escritos.", correct: false },
+                    { text: "B) El IDS detecta y alerta, mientras que el IPS detecta y bloquea activamente.", correct: true },
+                    { text: "C) El IDS opera exclusivamente en redes Wi-Fi y el IPS en fibra.", correct: false },
+                    { text: "D) No existe ninguna diferencia funcional.", correct: false }
+                ],
+                explanation: "La capacidad de intervención y mitigación en línea distingue al IPS del rol pasivo de alerta del IDS."
+            },
+            {
+                domain: "Dominio 2: Conceptos Básicos de Seguridad en Redes",
+                question: "Escenario 34: Un equipo cliente conectado a la red local obtiene su dirección IP, máscara de subred y puerta de enlace de forma automática. ¿Qué protocolo gestiona esta asignación?",
+                options: [
+                    { text: "A) DNS", correct: false },
+                    { text: "B) DHCP", correct: true },
+                    { text: "C) NTP", correct: false },
+                    { text: "D) SNMP", correct: false }
+                ],
+                explanation: "DHCP automatiza la configuración de parámetros de red en los dispositivos clientes."
+            },
+            {
+                domain: "Dominio 2: Conceptos Básicos de Seguridad en Redes",
+                question: "Escenario 35: Al configurar una red inalámbrica corporativa, el técnico selecciona el estándar Wi-Fi más robusto y seguro disponible en la actualidad. ¿Cuál es?",
+                options: [
+                    { text: "A) WEP", correct: false },
+                    { text: "B) WPA", correct: false },
+                    { text: "C) WPA2", correct: false },
+                    { text: "D) WPA3", correct: true }
+                ],
+                explanation: "WPA3 es el estándar de seguridad inalámbrica más moderno, incorporando cifrado individualizado."
+            },
+            {
+                domain: "Dominio 2: Conceptos Básicos de Seguridad en Redes",
+                question: "Escenario 36: Un atacante falsifica la dirección IP de origen en las cabeceras de los paquetes enviados a un servidor para aparentar ser un equipo legítimo. ¿Cómo se llama esta técnica?",
+                options: [
+                    { text: "A) IP Spoofing", correct: true },
+                    { text: "B) Envenenamiento ARP", correct: false },
+                    { text: "C) Subnetting dinámico", correct: false },
+                    { text: "D) Encriptación asimétrica", correct: false }
+                ],
+                explanation: "El spoofing IP suplanta la dirección de origen para evadir controles o anonimizar ataques."
+            },
+            {
+                domain: "Dominio 2: Conceptos Básicos de Seguridad en Redes",
+                question: "Escenario 37: Un administrador de red necesita capturar y examinar los paquetes que circulan por una interfaz para diagnosticar un problema de seguridad. ¿Qué herramienta estándar utiliza?",
+                options: [
+                    { text: "A) Wireshark", correct: true },
+                    { text: "B) Bloc de notas", correct: false },
+                    { text: "C) MS Paint", correct: false },
+                    { text: "D) WinRAR", correct: false }
+                ],
+                explanation: "Wireshark es el analizador de protocolos y captura de paquetes más extendido en ciberseguridad."
+            },
+            {
+                domain: "Dominio 2: Conceptos Básicos de Seguridad en Redes",
+                question: "Escenario 38: Un firewall avanzado evalúa el contexto y el estado de las conexiones activas (nuevas, establecidas) antes de permitir el paso de paquetes. ¿Qué tipo de firewall es?",
+                options: [
+                    { text: "A) Firewall de filtrado estático de paquetes", correct: false },
+                    { text: "B) Stateful Inspection Firewall (Inspección de estados)", correct: true },
+                    { text: "C) Hub inteligente de capa 2", correct: false },
+                    { text: "D) Repetidor inalámbrico", correct: false }
+                ],
+                explanation: "Los firewalls con inspección de estados analizan el flujo y ciclo de vida de las conexiones."
+            },
+            {
+                domain: "Dominio 2: Conceptos Básicos de Seguridad en Redes",
+                question: "Escenario 39: Una empresa desea publicar servidores web y de correo accesibles al público general pero aislados de la red interna de oficinas. ¿Qué zona de red debe configurar?",
+                options: [
+                    { text: "A) Una DMZ (Zona Desmilitarizada)", correct: true },
+                    { text: "B) Una VLAN administrativa general", correct: false },
+                    { text: "C) Una red LAN inalámbrica abierta", correct: false },
+                    { text: "D) Un segmento sin enrutamiento", correct: false }
+                ],
+                explanation: "La DMZ aísla servicios públicos expuestos protegiendo la red interna corporativa ante intrusiones."
+            },
+            {
+                domain: "Dominio 2: Conceptos Básicos de Seguridad en Redes",
+                question: "Escenario 40: ¿Qué protocolo se utiliza en redes para sincronizar con precisión los relojes de los diferentes servidores y equipos, vital para la correlación de logs?",
+                options: [
+                    { text: "A) HTTP", correct: false },
+                    { text: "B) FTP", correct: false },
+                    { text: "C) NTP (Network Time Protocol)", correct: true },
+                    { text: "D) DHCP", correct: false }
+                ],
+                explanation: "NTP garantiza la sincronización horaria exacta entre dispositivos para el análisis forense y de registros."
+            },
+            {
+                domain: "Dominio 3: Seguridad en Endpoints",
+                question: "Escenario 41: Un equipo de una sucursal amanece con todos sus documentos cifrados y un mensaje exigiendo pago en criptomonedas para liberar la clave. ¿Qué tipo de malware afectó al endpoint?",
+                options: [
+                    { text: "A) Spyware", correct: false },
+                    { text: "B) Adware", correct: false },
+                    { text: "C) Ransomware", correct: true },
+                    { text: "D) Gusano", correct: false }
+                ],
+                explanation: "El ransomware cifra la información del endpoint y pide un rescate financiero a cambio de la recuperación."
+            },
+            {
+                domain: "Dominio 3: Seguridad en Endpoints",
+                question: "Escenario 42: Para proteger los datos de laptops corporativas ante robos físicos del equipo, el técnico habilita la tecnología de cifrado de disco nativa en Windows. ¿Cómo se llama?",
+                options: [
+                    { text: "A) BitLocker", correct: true },
+                    { text: "B) Firewall Defender", correct: false },
+                    { text: "C) Administrador de tareas", correct: false },
+                    { text: "D) UAC (Control de cuentas)", correct: false }
+                ],
+                explanation: "BitLocker protege la información completa de la unidad frente a extracción física del almacenamiento."
+            },
+            {
+                domain: "Dominio 3: Seguridad en Endpoints",
+                question: "Escenario 43: El departamento de seguridad elimina servicios innecesarios, cierra puertos abiertos y aplica parches en los servidores nuevos antes de pasarlos a producción. ¿Cómo se le llama a este proceso?",
+                options: [
+                    { text: "A) Hardening (Endurecimiento)", correct: true },
+                    { text: "B) Formateo lógico", correct: false },
+                    { text: "C) Virtualización de red", correct: false },
+                    { text: "D) Balanceo de carga", correct: false }
+                ],
+                explanation: "El hardening reduce la superficie de ataque del endpoint eliminando vectores innecesarios."
+            },
+            {
+                domain: "Dominio 3: Seguridad en Endpoints",
+                question: "Escenario 44: Una herramienta avanzada instalada en las estaciones de trabajo monitorea continuamente comportamientos sospechosos y permite respuesta automatizada ante amenazas. ¿Qué tipo de solución es?",
+                options: [
+                    { text: "A) EDR (Endpoint Detection and Response)", correct: true },
+                    { text: "B) Servidor DHCP secundario", correct: false },
+                    { text: "C) Antivirus tradicional de firmas estáticas", correct: false },
+                    { text: "D) Suite de diseño gráfico", correct: false }
+                ],
+                explanation: "EDR ofrece visibilidad avanzada y capacidades de respuesta conductual en endpoints."
+            },
+            {
+                domain: "Dominio 3: Seguridad en Endpoints",
+                question: "Escenario 45: Un usuario descarga un juego gratuito de internet que incluye oculto un código malicioso para robar credenciales bancarias. ¿Qué clase de malware es?",
+                options: [
+                    { text: "A) Gusano autónomo", correct: false },
+                    { text: "B) Troyano (Trojan)", correct: true },
+                    { text: "C) Rootkit de kernel", correct: false },
+                    { text: "D) Cookie de sesión", correct: false }
+                ],
+                explanation: "Un troyano se disfraza de software legítimo para engañar al usuario y ejecutar acciones ocultas."
+            },
+            {
+                domain: "Dominio 3: Seguridad en Endpoints",
+                question: "Escenario 46: El fabricante de un sistema operativo libera una actualización urgente para corregir una falla de seguridad recientemente descubierta. ¿Cómo se denomina esta actualización?",
+                options: [
+                    { text: "A) Parche de seguridad (Security Patch)", correct: true },
+                    { text: "B) Controlador de video", correct: false },
+                    { text: "C) Tema de escritorio", correct: false },
+                    { text: "D) Licencia comercial", correct: false }
+                ],
+                explanation: "Los parches de seguridad corrigen vulnerabilidades de software antes de que sean explotadas masivamente."
+            },
+            {
+                domain: "Dominio 3: Seguridad en Endpoints",
+                question: "Escenario 47: A diferencia de los virus, este tipo de malware se propaga de manera autónoma a través de las vulnerabilidades de la red sin requerir que el usuario abra archivos. ¿Cuál es?",
+                options: [
+                    { text: "A) Troyano", correct: false },
+                    { text: "B) Gusano (Worm)", correct: true },
+                    { text: "C) Adware", correct: false },
+                    { text: "D) Spyware", correct: false }
+                ],
+                explanation: "Los gusanos explotan fallas de red para autoreplicarse y viajar de un equipo a otro sin intervención humana."
+            },
+            {
+                domain: "Dominio 3: Seguridad en Endpoints",
+                question: "Escenario 48: Un software malicioso se instala en lo más profundo del sistema operativo (nivel kernel) para ocultar procesos y evadir la detección del antivirus. ¿Qué es?",
+                options: [
+                    { text: "A) Rootkit", correct: true },
+                    { text: "B) Keylogger USB", correct: false },
+                    { text: "C) Script de PowerShell", correct: false },
+                    { text: "D) Archivo temporal", correct: false }
+                ],
+                explanation: "Los rootkits manipulan el núcleo del sistema para enmascarar su presencia y la de otros atacantes."
+            },
+            {
+                domain: "Dominio 3: Seguridad en Endpoints",
+                question: "Escenario 49: En Windows, un mecanismo avisa al usuario y solicita confirmación con privilegios elevados antes de permitir cambios en la configuración del sistema. ¿Cómo se llama?",
+                options: [
+                    { text: "A) UAC (Control de Cuentas de Usuario)", correct: true },
+                    { text: "B) BitLocker", correct: false },
+                    { text: "C) Windows Defender ATP", correct: false },
+                    { text: "D) Administrador de dispositivos", correct: false }
+                ],
+                explanation: "UAC previene ejecuciones silenciosas de privilegios administrativos por parte de aplicaciones."
+            },
+            {
+                domain: "Dominio 3: Seguridad en Endpoints",
+                question: "Escenario 50: Un programa recopila silenciosamente historiales de navegación y pulsaciones de teclado de un empleado sin su conocimiento. ¿Qué tipo de software es?",
+                options: [
+                    { text: "A) Spyware", correct: true },
+                    { text: "B) Antivirus", correct: false },
+                    { text: "C) Firewall", correct: false },
+                    { text: "D) Gestor de arranque", correct: false }
+                ],
+                explanation: "El spyware recolecta información privada del usuario de forma oculta."
+            },
+            {
+                domain: "Dominio 3: Seguridad en Endpoints",
+                question: "Escenario 51: Un analista configura cuentas de usuario estándar para la operación diaria y reserva la cuenta de Administrador exclusivamente para tareas de mantenimiento. ¿Qué principio aplica?",
+                options: [
+                    { text: "A) Menor privilegio en endpoints", correct: true },
+                    { text: "B) Confianza absoluta", correct: false },
+                    { text: "C) Redundancia de hardware", correct: false },
+                    { text: "D) Cifrado simétrico", correct: false }
+                ],
+                explanation: "Operar con cuentas estándar mitiga drásticamente el impacto si un endpoint es comprometido."
+            },
+            {
+                domain: "Dominio 3: Seguridad en Endpoints",
+                question: "Escenario 52: Un atacante explota una vulnerabilidad de software totalmente desconocida para el fabricante para la cual no existe ningún parche correctivo. ¿Cómo se denomina?",
+                options: [
+                    { text: "A) Vulnerabilidad de Día Cero (Zero-Day)", correct: true },
+                    { text: "B) Ataque de fuerza bruta", correct: false },
+                    { text: "C) Inyección SQL estándar", correct: false },
+                    { text: "D) Phishing corporativo", correct: false }
+                ],
+                explanation: "Los ataques de día cero explotan fallas inéditas antes de que el desarrollador emita una solución."
+            },
+            {
+                domain: "Dominio 3: Seguridad en Endpoints",
+                question: "Escenario 53: El antivirus detecta un archivo sospechoso y lo aísla en un directorio cifrado especial sin borrarlo definitivamente. ¿Qué acción realizó?",
+                options: [
+                    { text: "A) Cuarentena", correct: true },
+                    { text: "B) Desfragmentación", correct: false },
+                    { text: "C) Formateo", correct: false },
+                    { text: "D) Compresión ZIP", correct: false }
+                ],
+                explanation: "La cuarentena neutraliza el archivo impidiendo su ejecución mientras se evalúa si es un falso positivo."
+            },
+            {
+                domain: "Dominio 3: Seguridad en Endpoints",
+                question: "Escenario 54: Un dispositivo físico conectado al puerto USB registra cada tecla que presiona el usuario en su teclado. ¿Cómo se le llama?",
+                options: [
+                    { text: "A) Keylogger físico", correct: true },
+                    { text: "B) Hub USB de expansión", correct: false },
+                    { text: "C) Token TOTP", correct: false },
+                    { text: "D) Adaptador Wi-Fi", correct: false }
+                ],
+                explanation: "Un keylogger captura las pulsaciones del teclado para robar credenciales e información confidencial."
+            },
+            {
+                domain: "Dominio 3: Seguridad en Endpoints",
+                question: "Escenario 55: ¿Por qué razón se deben desinstalar aplicaciones y servicios que no se utilicen en un servidor o estación de trabajo?",
+                options: [
+                    { text: "A) Para reducir la superficie de ataque del endpoint", correct: true },
+                    { text: "B) Para incrementar el brillo de la pantalla", correct: false },
+                    { text: "C) Para cumplir con normas estéticas de diseño", correct: false },
+                    { text: "D) Para evitar el uso de redes inalámricas", correct: false }
+                ],
+                explanation: "Menos software innecesario significa menor cantidad de fallas y vectores de entrada potenciales."
+            },
+            {
+                domain: "Dominio 3: Seguridad en Endpoints",
+                question: "Escenario 56: En placas base modernas, ¿qué tecnología verifica la integridad de las firmas digitales del software de arranque antes de cargar el sistema operativo?",
+                options: [
+                    { text: "A) Secure Boot (Arranque Seguro mediante UEFI)", correct: true },
+                    { text: "B) Disco duro mecánico IDE", correct: false },
+                    { text: "C) Fuente de alimentación modular", correct: false },
+                    { text: "D) Memoria RAM DDR4", correct: false }
+                ],
+                explanation: "Secure Boot bloquea rootkits y malware de nivel de inicio validando firmas criptográficas en el arranque."
+            },
+            {
+                domain: "Dominio 3: Seguridad en Endpoints",
+                question: "Escenario 57: Un usuario se queja de que su navegador abre ventanas emergentes con publicidad invasiva de forma constante. ¿Qué tipo de software afecta al equipo?",
+                options: [
+                    { text: "A) Adware", correct: true },
+                    { text: "B) Ransomware", correct: false },
+                    { text: "C) Antivirus", correct: false },
+                    { text: "D) Parche de red", correct: false }
+                ],
+                explanation: "El adware inyecta publicidad no solicitada y molesta en los equipos de los usuarios."
+            },
+            {
+                domain: "Dominio 3: Seguridad en Endpoints",
+                question: "Escenario 58: Mantener el sistema operativo y las aplicaciones con sus actualizaciones al día corresponde a la disciplina de:",
+                options: [
+                    { text: "A) Gestión de parches (Patch Management)", correct: true },
+                    { text: "B) Formateo periódico", correct: false },
+                    { text: "C) Desfragmentación de archivos", correct: false },
+                    { text: "D) Segmentación VLAN", correct: false }
+                ],
+                explanation: "El patch management es fundamental para corregir vulnerabilidades conocidas en endpoints."
+            },
+            {
+                domain: "Dominio 3: Seguridad en Endpoints",
+                question: "Escenario 59: Un empleado encuentra una memoria USB desconocida en el estacionamiento y decide conectarla a su PC de trabajo. ¿Qué riesgo principal representa?",
+                options: [
+                    { text: "A) Que contenga malware o simule ser un dispositivo de inyección de comandos (BadUSB)", correct: true },
+                    { text: "B) Que la memoria esté vacía y no funcione", correct: false },
+                    { text: "C) Que aumente la velocidad del procesador", correct: false },
+                    { text: "D) Que actualice automáticamente los drivers de red", correct: false }
+                ],
+                explanation: "Las memorias USB huérfanas son un vector clásico de ingeniería social e infección maliciosa."
+            },
+            {
+                domain: "Dominio 3: Seguridad en Endpoints",
+                question: "Escenario 60: ¿Qué garantiza que un archivo ejecutable cuente con una firma digital válida emitida por un desarrollador reconocido?",
+                options: [
+                    { text: "A) Que su origen y autenticidad no han sido alterados desde su publicación", correct: true },
+                    { text: "B) Que el archivo no puede borrarse del equipo", correct: false },
+                    { text: "C) Que contiene un troyano avanzado de fábrica", correct: false },
+                    { text: "D) Que funciona sin conexión a internet", correct: false }
+                ],
+                explanation: "La firma digital certifica criptográficamente la autoría y la integridad del software ejecutable."
+            },
+            {
+                domain: "Dominio 4: Evaluación de Vulnerabilidades y Gestión de Riesgos",
+                question: "Escenario 61: ¿Qué sistemas estandarizados se utilizan comúnmente para catalogar vulnerabilidades (CVE) y puntuar numéricamente su gravedad (CVSS)?",
+                options: [
+                    { text: "A) CVE y CVSS", correct: true },
+                    { text: "B) ISO 9001 y COBIT", correct: false },
+                    { text: "C) TCP y UDP", correct: false },
+                    { text: "D) IEEE 802.11", correct: false }
+                ],
+                explanation: "CVE identifica la vulnerabilidad de forma única y CVSS calcula su puntuación de severidad técnica."
+            },
+            {
+                domain: "Dominio 6: Evaluación de Riesgos",
+                question: "Escenario 62: Una organización decide contratar una póliza de ciberseguridad para trasladar el impacto económico de posibles ataques a una aseguradora. ¿Qué estrategia aplica?",
+                options: [
+                    { text: "A) Mitigación", correct: false },
+                    { text: "B) Transferencia de riesgo", correct: true },
+                    { text: "C) Evitación", correct: false },
+                    { text: "D) Aceptación ciega", correct: false }
+                ],
+                explanation: "La transferencia desplaza la carga financiera del riesgo hacia un tercero (compañía de seguros)."
+            },
+            {
+                domain: "Dominio 4: Evaluación de Vulnerabilidades y Gestión de Riesgos",
+                question: "Escenario 63: ¿Cuál es la diferencia fundamental entre una vulnerabilidad y una amenaza en ciberseguridad?",
+                options: [
+                    { text: "A) La vulnerabilidad es una debilidad del sistema; la amenaza es el agente o evento potencial que puede explotarla.", correct: true },
+                    { text: "B) La amenaza es un error de software y la vulnerabilidad es un ataque en curso.", correct: false },
+                    { text: "C) Son términos completamente sinónimos.", correct: false },
+                    { text: "D) La amenaza solo aplica a redes inalámbricas.", correct: false }
+                ],
+                explanation: "Una vulnerabilidad es la falla interna; la amenaza es la fuerza externa o evento que puede aprovecharla."
+            },
+            {
+                domain: "Dominio 4: Evaluación de Vulnerabilidades y Gestión de Riesgos",
+                question: "Escenario 64: La directiva decide cancelar un proyecto tecnológico por considerarlo demasiado peligroso para la seguridad de la compañía. ¿Qué estrategia de riesgo adoptó?",
+                options: [
+                    { text: "A) Evitación de riesgo (Risk Avoidance)", correct: true },
+                    { text: "B) Transferencia", correct: false },
+                    { text: "C) Mitigación técnica", correct: false },
+                    { text: "D) Aceptación pasiva", correct: false }
+                ],
+                explanation: "La evitación implica renunciar por completo a la realización de la actividad riesgosa."
+            },
+            {
+                domain: "Dominio 4: Evaluación de Vulnerabilidades y Gestión de Riesgos",
+                question: "Escenario 65: La gerencia evalúa una vulnerabilidad menor cuyo costo de parcheo supera con creces el daño potencial, decidiendo no aplicar correcciones adicionales. ¿Qué estrategia es?",
+                options: [
+                    { text: "A) Aceptación del riesgo", correct: true },
+                    { text: "B) Mitigación avanzada", correct: false },
+                    { text: "C) Transferencia total", correct: false },
+                    { text: "D) Evitación corporativa", correct: false }
+                ],
+                explanation: "La aceptación del riesgo es una decisión consciente y documentada de asumir las consecuencias sin gastar en mitigación."
+            },
+            {
+                domain: "Dominio 4: Evaluación de Vulnerabilidades y Gestión de Riesgos",
+                question: "Escenario 66: ¿Cuál es el propósito fundamental de realizar un escaneo automatizado de vulnerabilidades en la red?",
+                options: [
+                    { text: "A) Identificar proactivamente fallas y debilidades antes de que sean explotadas por atacantes", correct: true },
+                    { text: "B) Bloquear permanentemente el acceso a los empleados", correct: false },
+                    { text: "C) Formatear los discos duros de respaldo", correct: false },
+                    { text: "D) Incrementar el tráfico de internet", correct: false }
+                ],
+                explanation: "Los escaneos descubren debilidades de forma proactiva para priorizar su corrección."
+            },
+            {
+                domain: "Dominio 4: Evaluación de Vulnerabilidades y Gestión de Riesgos",
+                question: "Escenario 67: En la planificación de recuperación ante desastres, ¿qué métrica define el tiempo máximo tolerable que un sistema puede permanecer inactivo?",
+                options: [
+                    { text: "A) RPO", correct: false },
+                    { text: "B) RTO (Recovery Time Objective)", correct: true },
+                    { text: "C) TTL", correct: false },
+                    { text: "D) CVSS Score", correct: false },
+                    { text: "E) SLA de red", correct: false }
+                ],
+                explanation: "El RTO establece el límite de tiempo aceptable para restaurar los servicios operativos tras una caída."
+            },
+            {
+                domain: "Dominio 4: Evaluación de Vulnerabilidades y Gestión de Riesgos",
+                question: "Escenario 68: ¿Qué métrica de respaldo indica la cantidad máxima tolerable de pérdida de datos medida en tiempo tras un fallo?",
+                options: [
+                    { text: "A) RPO (Recovery Point Objective)", correct: true },
+                    { text: "B) RTO", correct: false },
+                    { text: "C) CVE ID", correct: false },
+                    { text: "D) Ancho de banda", correct: false }
+                ],
+                explanation: "El RPO determina la frescura requerida de los respaldos (ej. copias cada hora implican un RPO de 1 hora)."
+            },
+            {
+                domain: "Dominio 4: Evaluación de Vulnerabilidades y Gestión de Riesgos",
+                question: "Escenario 69: ¿En qué consiste la regla de oro de respaldos denominada '3-2-1'?",
+                options: [
+                    { text: "A) 3 copias de datos, en 2 soportes diferentes, y 1 copia fuera del sitio (offsite)", correct: true },
+                    { text: "B) 3 contraseñas, 2 firewalls y 1 antivirus", correct: false },
+                    { text: "C) 3 días de trabajo, 2 de descanso y 1 de reporte", correct: false },
+                    { text: "D) 3 puertos abiertos, 2 cerrados y 1 en DMZ", correct: false }
+                ],
+                explanation: "La estrategia 3-2-1 garantiza resiliencia ante ransomware y pérdida catastrófica de hardware."
+            },
+            {
+                domain: "Dominio 4: Evaluación de Vulnerabilidades y Gestión de Riesgos",
+                question: "Escenario 70: ¿Qué representa una matriz de riesgos en ciberseguridad?",
+                options: [
+                    { text: "A) Una herramienta gráfica para priorizar riesgos cruzando su probabilidad de ocurrencia e impacto", correct: true },
+                    { text: "B) Una hoja de cálculo para calcular nóminas", correct: false },
+                    { text: "C) Un diagrama físico de conexiones de red", correct: false },
+                    { text: "D) Una lista de contraseñas de usuarios", correct: false }
+                ],
+                explanation: "La matriz de riesgos ayuda a visualizar y priorizar qué eventos requieren atención urgente."
+            },
+            {
+                domain: "Dominio 4: Evaluación de Vulnerabilidades y Gestión de Riesgos",
+                question: "Escenario 71: ¿Qué acción define la mitigación de riesgos?",
+                options: [
+                    { text: "A) Implementar controles y contramedidas para reducir la probabilidad o impacto de una amenaza", correct: true },
+                    { text: "B) Ignorar los problemas de seguridad", correct: false },
+                    { text: "C) Comprar seguros sin aplicar protecciones técnicas", correct: false },
+                    { text: "D) Ocultar los fallos a la directiva", correct: false }
+                ],
+                explanation: "Mitigar implica colocar barreras defensivas (parches, firewalls, políticas) para disminuir el riesgo."
+            },
+            {
+                domain: "Dominio 4: Evaluación de Vulnerabilidades y Gestión de Riesgos",
+                question: "Escenario 72: ¿Cómo se define un 'Exploit' en el contexto de seguridad informática?",
+                options: [
+                    { text: "A) Un código o técnica diseñada para aprovechar una vulnerabilidad y comprometer un sistema", correct: true },
+                    { text: "B) Un sistema de respaldo en la nube", correct: false },
+                    { text: "C) Una auditoría legal de cumplimiento", correct: false },
+                    { text: "D) Una política de contraseñas", correct: false }
+                ],
+                explanation: "El exploit materializa el ataque aprovechando la debilidad existente (vulnerabilidad)."
+            },
+            {
+                domain: "Dominio 4: Evaluación de Vulnerabilidades y Gestión de Riesgos",
+                question: "Escenario 73: ¿Cuál es el objetivo principal de realizar pruebas de penetración (Penetration Testing) autorizadas?",
+                options: [
+                    { text: "A) Simular ataques reales para evaluar la efectividad defensiva y descubrir brechas explotables", correct: true },
+                    { text: "B) Destruir la infraestructura de la empresa cliente", correct: false },
+                    { text: "C) Comprobar la velocidad del proveedor de internet", correct: false },
+                    { text: "D) Capacitar usuarios en ofimática", correct: false }
+                ],
+                explanation: "Los pentesters humanos replican tácticas adversarias para comprobar la resistencia real de los sistemas."
+            },
+            {
+                domain: "Dominio 4: Evaluación de Vulnerabilidades y Gestión de Riesgos",
+                question: "Escenario 74: ¿Qué indica que una vulnerabilidad tenga una puntuación CVSS de 9.8 (Crítica)?",
+                options: [
+                    { text: "A) Que es fácil de explotar de forma remota y su impacto en la Tríada CIA es severo", correct: true },
+                    { text: "B) Que el sistema fallará en 9.8 horas exactas", correct: false },
+                    { text: "C) Que el parche cuesta 9.8 dólares", correct: false },
+                    { text: "D) Que se descubrió hace 98 días", correct: false }
+                ],
+                explanation: "Un puntaje CVSS superior a 9.0 clasifica la vulnerabilidad como crítica, exigiendo parcheo inmediato."
+            },
+            {
+                domain: "Dominio 4: Evaluación de Vulnerabilidades y Gestión de Riesgos",
+                question: "Escenario 75: ¿Qué abarca un Plan de Continuidad de Negocio (BCP)?",
+                options: [
+                    { text: "A) Una estrategia integral para asegurar que la organización siga operando ante interrupciones graves", correct: true },
+                    { text: "B) Un contrato exclusivo de mantenimiento de impresoras", correct: false },
+                    { text: "C) Un plan de vacaciones para personal de soporte", correct: false },
+                    { text: "D) Un documento de liquidación laboral", correct: false }
+                ],
+                explanation: "El BCP asegura la supervivencia operativa general de la empresa frente a cualquier crisis mayor."
+            },
+            {
+                domain: "Dominio 4: Evaluación de Vulnerabilidades y Gestión de Riesgos",
+                question: "Escenario 76: ¿Cuál es la diferencia principal entre un BCP y un DRP (Plan de Recuperación ante Desastres)?",
+                options: [
+                    { text: "A) El BCP abarca la operación de toda la empresa; el DRP se enfoca específicamente en restaurar la infraestructura tecnológica y de datos.", correct: true },
+                    { text: "B) El DRP es contable y el BCP es legal.", correct: false },
+                    { text: "C) No existe ninguna diferencia técnica.", correct: false },
+                    { text: "D) El DRP solo aplica para ataques de malware.", correct: false }
+                ],
+                explanation: "El DRP es una subcomponente técnica especializada dentro del marco mayor del BCP."
+            },
+            {
+                domain: "Dominio 4: Evaluación de Vulnerabilidades y Gestión de Riesgos",
+                question: "Escenario 77: ¿Qué es un respaldo en frío (Cold Backup)?",
+                options: [
+                    { text: "A) Una copia de seguridad realizada con el sistema apagado o fuera de servicio", correct: true },
+                    { text: "B) Un respaldo guardado dentro de un refrigerador", correct: false },
+                    { text: "C) Un respaldo cifrado con claves débiles", correct: false },
+                    { text: "D) Una copia automática en tiempo real", correct: false }
+                ],
+                explanation: "El respaldo en frío garantiza consistencia al no haber archivos en uso, pero requiere interrumpir el servicio."
+            },
+            {
+                domain: "Dominio 4: Evaluación de Vulnerabilidades y Gestión de Riesgos",
+                question: "Escenario 78: ¿Cuál es el rol de la alta dirección (Gerencia) en la gestión de riesgos de ciberseguridad?",
+                options: [
+                    { text: "A) Asumir la responsabilidad final, aprobar políticas y asignar presupuesto para los controles", correct: true },
+                    { text: "B) Instalar los antivirus en cada equipo de forma manual", correct: false },
+                    { text: "C) Ejecutar los escaneos de red semanales", correct: false },
+                    { text: "D) Desentenderse al ser un tema técnico", correct: false }
+                ],
+                explanation: "La ciberseguridad es una responsabilidad de gobierno corporativo que requiere el respaldo directivo."
+            },
+            {
+                domain: "Dominio 4: Evaluación de Vulnerabilidades y Gestión de Riesgos",
+                question: "Escenario 79: ¿Qué se busca al realizar auditorías de cumplimiento normativo (Compliance)?",
+                options: [
+                    { text: "A) Verificar que la organización cumple con leyes, regulaciones y estándares de seguridad aplicables", correct: true },
+                    { text: "B) Pagar menos impuestos estatales", correct: false },
+                    { text: "C) Despedir personal operativo", correct: false },
+                    { text: "D) Incrementar la velocidad del hardware", correct: false }
+                ],
+                explanation: "El compliance asegura la adhesión a marcos regulatorios y estándares de la industria."
+            },
+            {
+                domain: "Dominio 4: Evaluación de Vulnerabilidades y Gestión de Riesgos",
+                question: "Escenario 80: Al evaluar el riesgo, la fórmula clásica combina la probabilidad de que ocurra una amenaza frente a:",
+                options: [
+                    { text: "A) El impacto resultante en caso de materializarse", correct: true },
+                    { text: "B) El número de empleados de la empresa", correct: false },
+                    { text: "C) La cantidad de colores del logotipo", correct: false },
+                    { text: "D) El tipo de sistema operativo cliente", correct: false }
+                ],
+                explanation: "El riesgo se evalúa cruzando la probabilidad de ocurrencia con el impacto financiero u operativo."
+            },
+            {
+                domain: "Dominio 5: Manejo de Incidentes",
+                question: "Escenario 81: Según el marco de NIST (SP 800-61), ¿cuál es la primera fase del proceso de respuesta a incidentes que ocurre antes de que se manifeste un evento?",
+                options: [
+                    { text: "A) Preparación (Preparation)", correct: true },
+                    { text: "B) Contención y erradicación", correct: false },
+                    { text: "C) Detección y análisis", correct: false },
+                    { text: "D) Actividades post-incidente", correct: false }
+                ],
+                explanation: "La preparación establece capacidades, herramientas y entrenamiento previo antes de que ocurra el incidente."
+            },
+            {
+                domain: "Dominio 5: Manejo de Incidentes",
+                question: "Escenario 82: En informática forense, ¿qué procedimiento garantiza que la evidencia digital recolectada mantenga su validez legal y no haya sido alterada?",
+                options: [
+                    { text: "A) Cadena de custodia (Chain of Custody)", correct: true },
+                    { text: "B) Menor privilegio", correct: false },
+                    { text: "C) Cifrado simétrico AES", correct: false },
+                    { text: "D) Ancho de banda dedicado", correct: false }
+                ],
+                explanation: "La cadena de custodia documenta minuciosamente cada persona y acción realizada sobre la evidencia digital."
+            },
+            {
+                domain: "Dominio 5: Manejo de Incidentes",
+                question: "Escenario 83: ¿Qué herramienta centraliza la recolección, correlación y análisis de registros (logs) de seguridad en toda la organización?",
+                options: [
+                    { text: "A) SIEM (Security Information and Event Management)", correct: true },
+                    { text: "B) Servidor DHCP básico", correct: false },
+                    { text: "C) Procesador de textos", correct: false },
+                    { text: "D) Conmutador telefónico IP", correct: false }
+                ],
+                explanation: "El SIEM procesa alertas masivas de múltiples fuentes para detectar ataques complejos en tiempo real."
+            },
+            {
+                domain: "Dominio 5: Manejo de Incidentes",
+                question: "Escenario 84: ¿Qué es un 'Indicador de Compromiso' (IoC)?",
+                options: [
+                    { text: "A) Una evidencia observable en un sistema o red que indica alta probabilidad de intrusión maliciosa", correct: true },
+                    { text: "B) Un botón físico de apagado de emergencia", correct: false },
+                    { text: "C) Una métrica de rendimiento de empleados", correct: false },
+                    { text: "D) El certificado de garantía de un switch", correct: false }
+                ],
+                explanation: "Los IoCs (hashes, IPs maliciosas, dominios C2) sirven para rastrear y detectar amenazas."
+            },
+            {
+                domain: "Dominio 5: Manejo de Incidentes",
+                question: "Escenario 85: Durante un incidente activo, ¿cuál es el objetivo principal de la fase de 'Contención'?",
+                options: [
+                    { text: "A) Detener la propagación del daño y aislar los sistemas afectados antes de que el impacto crezca", correct: true },
+                    { text: "B) Borrar todos los discos duros de la empresa", correct: false },
+                    { text: "C) Enviar comunicados de prensa a la competencia", correct: false },
+                    { text: "D) Negociar el rescate económico con los atacantes", correct: false }
+                ],
+                explanation: "La contención limita el alcance del daño aislando los equipos comprometidos."
+            },
+            {
+                domain: "Dominio 5: Manejo de Incidentes",
+                question: "Escenario 86: ¿Qué acción se realiza durante la fase de 'Erradicación' en la respuesta a incidentes?",
+                options: [
+                    { text: "A) Eliminar la causa raíz del incidente (borrar malware, cerrar brechas, revocar cuentas)", correct: true },
+                    { text: "B) Apagar la empresa por tiempo indefinido", correct: false },
+                    { text: "C) Cambiar de proveedor de internet", correct: false },
+                    { text: "D) Comprar equipo de oficina nuevo", correct: false }
+                ],
+                explanation: "La erradicación remueve por completo el agente malicioso y los artefactos de ataque del entorno."
+            },
+            {
+                domain: "Dominio 5: Manejo de Incidentes",
+                question: "Escenario 87: ¿Cómo se define el análisis forense digital?",
+                options: [
+                    { text: "A) La ciencia de adquirir, preservar, analizar y presentar evidencia digital legalmente", correct: true },
+                    { text: "B) La reparación de pantallas de smartphones", correct: false },
+                    { text: "C) El diseño de contraseñas robustas", correct: false },
+                    { text: "D) La instalación de cableado estructurado", correct: false }
+                ],
+                explanation: "Sigue metodologías científicas estrictas para reconstruir qué ocurrió durante un ciberataque sin corromper la prueba."
+            },
+            {
+                domain: "Dominio 5: Manejo de Incidentes",
+                question: "Escenario 88: ¿Qué se realiza en la fase de 'Lecciones Aprendidas' (Post-Incident Activity)?",
+                options: [
+                    { text: "A) Documentar el evento, evaluar la respuesta y aplicar mejoras para evitar recurrencias", correct: true },
+                    { text: "B) Despedir a todo el personal técnico", correct: false },
+                    { text: "C) Formatear las memorias USB corporativas", correct: false },
+                    { text: "D) Reducir el presupuesto de ciberseguridad", correct: false }
+                ],
+                explanation: "Cierra el ciclo de mejora continua analizando fortalezas y debilidades en la respuesta dada."
+            },
+            {
+                domain: "Dominio 5: Manejo de Incidentes",
+                question: "Escenario 89: ¿Qué es un 'Playbook' (libro de jugadas) en el manejo de incidentes?",
+                options: [
+                    { text: "A) Una guía paso a paso estandarizada sobre cómo responder ante un tipo específico de incidente", correct: true },
+                    { text: "B) Un manual de videojuegos para empleados", correct: false },
+                    { text: "C) El contrato laboral del personal de TI", correct: false },
+                    { text: "D) Un folleto publicitario de software", correct: false }
+                ],
+                explanation: "Los playbooks estandarizan y aceleran la respuesta del equipo ante crisis recurrentes."
+            },
+            {
+                domain: "Dominio 5: Manejo de Incidentes",
+                question: "Escenario 90: ¿Cuál es el riesgo de manipular un disco duro infectado directamente sin clonarlo primero para análisis forense?",
+                options: [
+                    { text: "A) Alterar o destruir metadatos y marcas de tiempo originales por operaciones de lectura/escritura", correct: true },
+                    { text: "B) Hacer explotar la fuente de alimentación", correct: false },
+                    { text: "C) Aumentar la velocidad del procesador", correct: false },
+                    { text: "D) Borrar la licencia de Windows permanentemente", correct: false }
+                ],
+                explanation: "Siempre se debe trabajar sobre una imagen forense exacta (bit-a-bit) para preservar la integridad de la prueba."
+            },
+            {
+                domain: "Dominio 5: Manejo de Incidentes",
+                question: "Escenario 91: ¿Qué es un SOC (Security Operations Center)?",
+                options: [
+                    { text: "A) Un equipo centralizado de profesionales encargado de vigilar y defender la infraestructura 24/7", correct: true },
+                    { text: "B) Un sindicato de operadores de computadoras", correct: false },
+                    { text: "C) Un tipo de conector de red de fibra óptica", correct: false },
+                    { text: "D) Una norma internacional de calidad ISO", correct: false }
+                ],
+                explanation: "El SOC opera como el centro neurálgico de vigilancia y respuesta ante amenazas de seguridad."
+            },
+            {
+                domain: "Dominio 92: Manejo de Incidentes",
+                question: "Escenario 92: ¿Qué es un falso positivo en la generación de alertas de seguridad?",
+                options: [
+                    { text: "A) Una alerta de seguridad que indica erróneamente una amenaza cuando es actividad benigna", correct: true },
+                    { text: "B) Un ataque real que no fue detectado por el antivirus", correct: false },
+                    { text: "C) Una contraseña aceptada por el sistema", correct: false },
+                    { text: "D) Un respaldo completado con éxito", correct: false }
+                ],
+                explanation: "Los falsos positivos generan fatiga de alertas al reportar eventos inofensivos como maliciosos."
+            },
+            {
+                domain: "Dominio 5: Manejo de Incidentes",
+                question: "Escenario 93: ¿Qué tipo de artefacto digital contiene registros cronológicos detallados de eventos, inicios de sesión y errores del sistema?",
+                options: [
+                    { text: "A) Registros de auditoría o Logs", correct: true },
+                    { text: "B) Archivos de imagen PNG", correct: false },
+                    { text: "C) Hojas de cálculo financieras", correct: false },
+                    { text: "D) Manuales de usuario en PDF", correct: false }
+                ],
+                explanation: "Los logs son la fuente primaria de evidencia e investigación durante un incidente de seguridad."
+            },
+            {
+                domain: "Dominio 5: Manejo de Incidentes",
+                question: "Escenario 94: ¿Cuál es el propósito de la fase de 'Recuperación' en el manejo de incidentes?",
+                options: [
+                    { text: "A) Restaurar los sistemas afectados a su funcionamiento normal y seguro, verificando su integridad", correct: true },
+                    { text: "B) Pagar multas gubernamentales", correct: false },
+                    { text: "C) Formatear toda la red corporativa", correct: false },
+                    { text: "D) Ocultar el incidente a la directiva", correct: false }
+                ],
+                explanation: "La recuperación asegura que los servicios vuelvan a operar con normalidad y seguridad comprobada."
+            },
+            {
+                domain: "Dominio 5: Manejo de Incidentes",
+                question: "Escenario 95: ¿Por qué es crucial la comunicación coordinada interna y externa durante un ciberincidente grave?",
+                options: [
+                    { text: "A) Para coordinar la respuesta técnica, cumplir obligaciones legales y mantener la confianza", correct: true },
+                    { text: "B) Para generar chismes en la oficina", correct: false },
+                    { text: "C) Para gastar el presupuesto anual asignado", correct: false },
+                    { text: "D) Para evitar el uso de correos electrónicos", correct: false }
+                ],
+                explanation: "La gestión de crisis y relaciones públicas es tan crítica como la contención técnica del problema."
+            },
+            {
+                domain: "Dominio 5: Manejo de Incidentes",
+                question: "Escenario 96: ¿Qué define a una 'Amenaza Persistente Avanzada' (APT)?",
+                options: [
+                    { text: "A) Una campaña de ataque prolongada y sigilosa llevada a cabo por actores sofisticados", correct: true },
+                    { text: "B) Un virus común de memoria USB", correct: false },
+                    { text: "C) Un fallo en el cableado de red local", correct: false },
+                    { text: "D) Un error tipográfico en una contraseña", correct: false }
+                ],
+                explanation: "Las APTs buscan permanecer ocultas en redes corporativas durante largos periodos para exfiltrar datos."
+            },
+            {
+                domain: "Dominio 5: Manejo de Incidentes",
+                question: "Escenario 97: ¿Para qué sirve el análisis de hashes (como SHA-256) en la identificación de malware?",
+                options: [
+                    { text: "A) Para calcular una huella digital matemática única del archivo y compararla con bases de amenazas", correct: true },
+                    { text: "B) Para cocinar archivos en la nube", correct: false },
+                    { text: "C) Para encriptar correos electrónicos institucionales", correct: false },
+                    { text: "D) Para medir la velocidad de descarga", correct: false }
+                ],
+                explanation: "Si el hash coincide con el de un malware catalogado, la identificación del archivo malicioso es inmediata."
+            },
+            {
+                domain: "Dominio 5: Manejo de Incidentes",
+                question: "Escenario 98: ¿En qué consiste la función de 'Threat Intelligence' (Inteligencia de Amenazas)?",
+                options: [
+                    { text: "A) Recopilar, analizar y contextualizar información sobre amenazas actuales para anticiparse a ataques", correct: true },
+                    { text: "B) Comprar computadoras con inteligencia artificial", correct: false },
+                    { text: "C) Bloquear todas las páginas web de noticias", correct: false },
+                    { text: "D) Contratar hackers novatos", correct: false }
+                ],
+                explanation: "Permite pasar de una postura reactiva a una proactiva basada en el conocimiento profundo del adversario."
+            },
+            {
+                domain: "Dominio 5: Manejo de Incidentes",
+                question: "Escenario 99: ¿Cuál es el propósito de realizar simulacros de incidentes (Tabletop Exercises)?",
+                options: [
+                    { text: "A) Ensayar mediante escenarios hipotéticos la respuesta directiva y técnica ante una crisis", correct: true },
+                    { text: "B) Jugar videojuegos en horario de oficina", correct: false },
+                    { text: "C) Probar la velocidad de los ventiladores de servidores", correct: false },
+                    { text: "D) Rellenar formatos de vacaciones", correct: false }
+                ],
+                explanation: "Los ejercicios de mesa ayudan a identificar brechas en los protocolos de comunicación y respuesta antes de una crisis real."
+            },
+            {
+                domain: "Dominio 5: Manejo de Incidentes",
+                question: "Escenario 100: ¿Qué se debe hacer inmediatamente tras confirmar que una cuenta de usuario corporativa ha sido comprometida?",
+                options: [
+                    { text: "A) Revocar sesiones activas, cambiar la contraseña de inmediato y revisar accesos recientes", correct: true },
+                    { text: "B) Enviar un correo burlándose del usuario", correct: false },
+                    { text: "C) Apagar el router principal de la empresa", correct: false },
+                    { text: "D) Formatear el teléfono personal del empleado", correct: false }
+                ],
+                explanation: "Cortar el acceso del atacante revocando sesiones y cambiando credenciales es el paso primordial para frenar daños."
+            }
         ];
 
         let currentQuestion = 0;
@@ -366,9 +1335,3 @@
     </script>
 </body>
 </html>
-```eof
-
-### Resumen del Simulador Basado en Escenarios de practica:
-* **100 Escenarios Prácticos de Soporte y Ciberseguridad**: Cada pregunta está redactada en formato de caso operativo de resolución de problemas técnicos.
-* **Explicaciones Detalladas**: Incluye razonamiento analítico y técnico por cada opción para reforzar el aprendizaje orientado a la certificación CCST.
-* **Entorno Profesional Interactivo**: Temporizador de 120 minutos, navegación fluida, conteo de aciertos y revisión de casos.
