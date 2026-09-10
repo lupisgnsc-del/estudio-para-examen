@@ -537,10 +537,7 @@
                 ],
                 explanation: "Un backup completo respalda toda la información designada. Aunque consume más tiempo y espacio, facilita enormemente la restauración de datos."
             },
-            // Preguntas adicionales hasta completar las 100
-            ...Array.from({ length: 60 }, (_, index) => {
-                const n = index + 41;
-                return {
+          {
                     domain: `Dominio Complementario (${((index % 4) + 1)})`,
                     question: `Pregunta de repaso avanzado CCST #${n}: ¿Cuál es la mejor práctica general frente a un correo electrónico desconocido con archivos adjuntos sospechosos?`,
                     options: [
@@ -551,6 +548,16 @@
                     ],
                     explanation: "La regla de oro ante correos sospechosos es no interactuar con enlaces o adjuntos y reportarlo inmediatamente al equipo de seguridad."
                 };
+                 {
+                domain: "Dominio 4: Manejo de Incidentes y Operaciones",
+                question: "¿Cuál es la función principal de un sistema IDS (Intrusion Detection System)??",
+                options: [
+                    { text: "Bloquear activamente el tráfico malicioso en tiempo real antes de que ingrese a la red..", correct: false },
+                    { text: "Monitorear el tráfico de red en busca de actividades sospechosas o anomalías y generar alertas..", correct: true },
+                    { text: "Cifrar los paquetes de datos que viajan a través de canales públicos de internet.", correct: false },
+                    { text: "Reemplazar por completo la necesidad de utilizar un software antivirus en los equipos terminales.", correct: false }
+                ],
+                explanation: "Un sistema de detección de intrusos (IDS) es pasivo en su forma clásica; analiza y alerta sobre anomalías. Si además tuviera la capacidad de bloquear activamente el tráfico de forma automática, se denominaría IPS (Intrusion Prevention System)."
             })
         ];
 
